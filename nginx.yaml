@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: testranges
+  name: testranges
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: testranges
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: testranges
+    spec:
+      containers:
+      - image: nginx
+        name: testranges
+        resources: {}
+status: {}
